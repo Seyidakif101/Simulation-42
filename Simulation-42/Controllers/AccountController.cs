@@ -33,7 +33,7 @@ namespace Simulation_42.Controllers
                     return View(vm);
                 }
             }
-            await _userManager.AddToRoleAsync(user, "Admin");
+            await _userManager.AddToRoleAsync(user, "Member");
             await _signInManager.SignInAsync(user, false);
             return RedirectToAction("Index", "Home");
         }
